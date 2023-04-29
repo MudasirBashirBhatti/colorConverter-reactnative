@@ -1,14 +1,19 @@
-import React from "react";
-import { View, Text , Button} from 'react-native'
-import User from "./components/User";
+import { Text, View } from 'react-native'
+import React, { Component } from 'react'
+import Colors from './components/Colors'
+import SplashScreen from 'react-native-splash-screen'
 
-export default function App() {
-  return (
-    <View>
-      <Text style={{fontSize:30}}>hello I'm mudasir and this is my App</Text>
-      <Text style={{fontSize:30}}>like share and subscribe</Text>
-      <Button title="Click Me"></Button>
-      <User/>
-    </View>
-  )
+export class App extends Component {
+  componentDidMount() {
+    SplashScreen.hide()
+  }
+  render() {
+    return (
+      <View>
+        <Colors/>
+      </View>
+    )
+  }
 }
+
+export default App
